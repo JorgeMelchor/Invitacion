@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Dancing+Script&display=swap" rel="stylesheet">
+    <script defer src="app.js"></script>
+    <style>
+        body {
+            font-family: 'Cinzel Decorative', serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .info-section {
+            background: white;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin: 5px 0;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            background-color: #d4a373;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Pantalla de Bienvenida -->
+    <div class="welcome-screen">
+        <div class="welcome-container">
+            <div class="wax-seal welcome-seal"></div>
+            <img src="images/fondo1.png" class="imaBackground">
+            <div class="welcome-content">
+                <h1 class="couple-names">Abi <br> & <br> Juan</h1>
+                <div class="divider">
+                    <div class="divider-line"></div>
+                    <div class="florico"><img src="images/florico.png" class="florico"></div>
+                    <div class="divider-line"></div>
+                </div>
+                <p class="welcome-message">¡Estás invitado a nuestra boda!</p>
+                <button class="open-invitation-btn" onclick="openInvitation()">Abrir Invitación</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contenido Principal -->
+    <div class="main-content hidden">
+        <section class="info-section fade-in">
+            <h2>Nuestra Boda</h2>
+            <p>¡Acompáñanos en nuestro día especial!</p>
+        </section>
+        
+        <section class="info-section slide-in-left">
+            <h3>Fecha</h3>
+            <p>25 de Octubre de 2025</p>
+        </section>
+        
+        <section class="info-section slide-in-right">
+            <h3>Lugar</h3>
+            <p>Hacienda Los Sueños, Querétaro</p>
+        </section>
+        
+        <section class="info-section fade-in">
+            <h3>Hora</h3>
+            <p>5:00 PM</p>
+        </section>
+        
+        <section class="info-section fade-in">
+            <h3>Confirma tu Asistencia</h3>
+            <form>
+                <label>
+                    <input type="radio" name="asistencia" value="si"> Sí, asistiré
+                </label>
+                <label>
+                    <input type="radio" name="asistencia" value="no"> No podré asistir
+                </label>
+                <br>
+                <h4>¿Dónde te hospedarás?</h4>
+                <label>
+                    <input type="radio" name="hospedaje" value="acampar"> Acamparé en el lugar
+                </label>
+                <label>
+                    <input type="radio" name="hospedaje" value="hotel"> Rentaré un hotel
+                </label>
+                <br>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
