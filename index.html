@@ -1,67 +1,27 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de Boda</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Dancing+Script&display=swap" rel="stylesheet">
     <script defer src="app.js"></script>
-    <style>
-        body {
-            font-family: 'Cinzel Decorative', serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-        }
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        .info-section {
-            background: white;
-            margin: 10px;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 400px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        label {
-            margin: 5px 0;
-        }
-        button {
-            margin-top: 10px;
-            padding: 10px;
-            border: none;
-            background-color: #d4a373;
-            color: white;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
 </head>
-<body>
+<body class="fondocuerpo">
     <!-- Pantalla de Bienvenida -->
     <div class="welcome-screen">
         <div class="welcome-container">
             <div class="wax-seal welcome-seal"></div>
-            <img src="images/fondo1.png" class="imaBackground">
+            <img src="images/fondo2.jpg" class="imaBackground">
             <div class="welcome-content">
                 <h1 class="couple-names">Abi <br> & <br> Juan</h1>
                 <div class="divider">
                     <div class="divider-line"></div>
-                    <div class="florico"><img src="images/florico.png" class="florico"></div>
+                    <div class="florico"><img src="images/icono6.png" class="florico"></div>
                     <div class="divider-line"></div>
                 </div>
                 <p class="welcome-message">¡Estás invitado a nuestra boda!</p>
@@ -72,47 +32,168 @@
     
     <!-- Contenido Principal -->
     <div class="main-content hidden">
-        <section class="info-section fade-in">
-            <h2>Nuestra Boda</h2>
-            <p>¡Acompáñanos en nuestro día especial!</p>
+        <br>
+        <br>
+            
+            <h1 class="titulobody">Nuestra Boda</h1> 
+            <img src="images/anillos22.png"  class="AnillosIma">  <!-- AQYU ESTA LA PERRA IMAGEN-->
+            <p class="pcss">¡Acompáñanos en nuestro día especial!</p>
+            <div class="Iconscroll"><img src="images/IconScroll.png"></div> 
+       
+            <br>
+            <br>
+            <br>
+            <br>
+        <section class="info-section">
+            <img src="https://img.icons8.com/ios-filled/50/calendar--v1.png" alt="Calendario" class="section-icon">
+            <h2 class="countdown-container">Fecha</h2>
+            <p class="date">3 de mayo 2025</p>
         </section>
-        
-        <section class="info-section slide-in-left">
-            <h3>Fecha</h3>
-            <p>25 de Octubre de 2025</p>
-        </section>
-        
+
         <section class="info-section slide-in-right">
-            <h3>Lugar</h3>
-            <p>Hacienda Los Sueños, Querétaro</p>
+                <img src="https://img.icons8.com/ios-filled/50/clock.png" alt="Reloj" class="section-icon">
+                    <h3 class="countdown-container">Hora</h3>
+                    <p class="date">1:00 PM</p>
+                    <div class="countdown-container">
+                    
+                        <h2 class="countdown-container">Faltan</h2>
+                        <div id="countdown">
+                            <span id="days">40</span>d 
+                            <span id="hours">16</span>h 
+                            <span id="minutes">19</span>m 
+                            <span id="seconds">20</span>s
+                        </div>
+                    
+                    </div>
+            </section>  
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        <section class="info-section slide-in-right">
+            <img src="images/iglesiaIcon.png" alt="Ubicación" class="section-icon">
+            <h2>Ubicación de la Seremonia</h3>
+            
+            <p class="p2css">Templo del Señor de la Misericordia.
+                Ubicado en Jalpa de Cánovas. Pueblo Mágico, Gto. </p>
+            
+                <img src="images/Templo.jpg"  class="TemploIma">  <!-- AQYU ESTA LA PERRA IMAGEN-->
+                <img src="images/Templo3.jpg"  class="TemploIma">  <!-- AQYU ESTA LA PERRA IMAGEN-->
+                <button class="submit-btn" data-location="templo">Click para ver Ubicación</button> 
+        </section>
+
+        <section class="info-section slide-in-right">
+            <img src="images/IcoFiesta.png" alt="Icono de fiesta" class="section-icon">
+            <h2>Ubicación de la Fiesta</h2> 
+            
+            <p class="p3css">Hacienda privada</p>
+            <img src="images/Hacienda.jpeg"  class="TemploIma">  <!-- AQYU ESTA LA PERRA IMAGEN-->
+            <button class="submit-btn" data-location="fiesta">Click para ver Ubicación</button>  
+        </section>
+        <!-- CAMPAMENYTOOOO-->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section class="info-section slide-in-right">
+            <img src="images/acampar.png" alt="Ubicación" class="section-icon">
+            <h3>Despues de la fiesta se planea organizar un campamento con todos los invitados que se queden al final.<br>
+                por lo que si te gustaría formar parte, te sugerimos ir equipado con tu casa de acampar y cobijas.</h3>
+            
+            <img src="images/camping.jpg" alt="casa de acampar" class="TemploIma">
+            
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- CAMPAMENYTOOOO-->
+
+        <!-- HOTELEEEES-->
+
+        <section class="info-section slide-in-right">
+            <img src="images/hotelIcon.png" alt="Ubicación" class="section-icon">
+            <h3>Tambien te podemos sugerir apartar habitación anticipadamente 
+                en ALGUNO DE los siguientes lugares: </h3>
+
+                <div class="hotel-container">
+                    <p class="p3css">Hotel Boutique Casa Luis Long</p>
+                    <img src="images/LuisLong.png" class="TemploIma">
+                    <button class="submit-btn" id="hotel1">Click para ver Ubicación</button>
+                </div>
+            
+                <div class="hotel-container">
+                    <p class="p3css">Puerta del Jardín Hotel</p>
+                    <img src="images/hotel22.png" class="TemploIma">
+                    <button class="submit-btn" id="hotel2">Click para ver Ubicación</button>
+                </div>
+            
+                <div class="hotel-container">
+                    <p class="p3css">Hotel Villa del Carmen</p>
+                    <img src="images/hotel3.png" class="TemploIma">
+                    <button class="submit-btn" id="hotel3">Click para ver Ubicación</button>
+                </div>
+            
+                <div class="hotel-container">
+                    <p class="p3css">Hotel Villa Jalpa</p>
+                    <img src="images/hotel4.png" class="TemploIma">
+                    <button class="submit-btn" id="hotel4">Click para ver Ubicación</button>
+                </div>
         </section>
         
-        <section class="info-section fade-in">
-            <h3>Hora</h3>
-            <p>5:00 PM</p>
-        </section>
+         <!-- HOTELEEEES-->
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+             <!-- MESA DE REGALOS -->
+             <section class="info-section slide-in-right">
+                <img src="images/RegaloIco.png" alt="Regalo" class="section-icon2">
+                <h3>Su presencia en nuestro día especial es el mejor regalo que podemos recibir. 
+                    Si desean acompañarnos con un detalle, hemos preparado una mesa de regalos virtual.
+                 También pueden hacerlo en persona el día del evento, ya sea con un obsequio o
+                  a través de un sobre. <br>
+                   Lo más importante para nosotros es compartir este momento con ustedes.</h3>
+
+                <button class="submit-btn" id="mesaregalo">Ver Mesa de Regalos</button>
+                <img src="images/DetaBanca.png" class="TemploIma">
+            </section>
+
+
+
+            <section class="info-section">
+                <form id="rsvpForm">
+                    <div class="form-group">
+                        <h3 class="p3css">Por favor confirma tu asistencia respoindiendo el
+                            siguiente formulario.</h3>
+                        <label for="name">Nombre Completo:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guests">¿Cuántas personas te acompañan?</label>
+                        <input type="number" id="guests" name="guests" min="1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="campahotel">¿Te interesa unirte al campamento post fiesta o rentar cuarto de hotel?</label>
+                        <select id="campahotel" name="campahotel" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="acampar">¡Me uniré al campamento!</option>
+                            <option value="hotel">Voy a hospedarme en hotel sugerido</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Confirmar asistencia</button>
+                </form>
+            </section>
         
-        <section class="info-section fade-in">
-            <h3>Confirma tu Asistencia</h3>
-            <form>
-                <label>
-                    <input type="radio" name="asistencia" value="si"> Sí, asistiré
-                </label>
-                <label>
-                    <input type="radio" name="asistencia" value="no"> No podré asistir
-                </label>
-                <br>
-                <h4>¿Dónde te hospedarás?</h4>
-                <label>
-                    <input type="radio" name="hospedaje" value="acampar"> Acamparé en el lugar
-                </label>
-                <label>
-                    <input type="radio" name="hospedaje" value="hotel"> Rentaré un hotel
-                </label>
-                <br>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
+     
+        
     </div>
 </body>
 </html>
