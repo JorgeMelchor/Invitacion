@@ -204,24 +204,24 @@ body {
 
 .fondocuerpo {
     position: relative;
-    background: none; /* Quitamos el fondo aquí */
+    background: none;
 }
 
-/* Solución para todos los dispositivos con pseudo-elemento */
-.fondocuerpo::before {
-    content: "";
+#fixed-background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("images/FondoIce.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     z-index: -1;
-    transform: translateZ(0); /* Forzar aceleración hardware */
-    will-change: transform; /* Optimizar rendimiento */
+    overflow: hidden;
+}
+
+#fixed-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 /*ESte pedo es para que el fondo del cuerpo no se ande reescalando */
 
