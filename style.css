@@ -131,7 +131,7 @@
     max-width: 400px; /* Limita el ancho en pantallas grandes */
     height: auto; /* Deja que la altura se ajuste automáticamente */
     margin: 0 auto; /* Centra la imagen horizontalmente */
-    margin-top: 30%; /* Ajusta el margen superior */
+    margin-top: 10%; /* Ajusta el margen superior */
 
     /* Efecto de máscara */
     -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 90%);
