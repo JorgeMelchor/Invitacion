@@ -81,14 +81,21 @@
     margin-top: 10%;
 }
 
+.p5css{
+    font-size: 120%;
+    font-family: 'Cinzel Decorative', serif;
+    text-align: top;
+    color: #af9c50;
+    font-weight: bold;
+    margin-top: 5%;
+}
 .pcss{
     font-size: 120%;
     font-family: 'Cinzel Decorative', serif;
     text-align: top;
     color: #af9c50;
     font-weight: bold;
-    
-    margin-top: 5%;
+    margin-top: 10%;
 }
 .p2css{
     font-size: 100%;
