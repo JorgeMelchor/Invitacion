@@ -87,7 +87,7 @@
     text-align: top;
     color: #af9c50;
     font-weight: bold;
-    margin-top: 5%;
+    margin-top: 15%;
 }
 .pcss{
     font-size: 120%;
@@ -138,7 +138,7 @@
     max-width: 400px; /* Limita el ancho en pantallas grandes */
     height: auto; /* Deja que la altura se ajuste automáticamente */
     margin: 0 auto; /* Centra la imagen horizontalmente */
-    margin-top: 5%; /* Ajusta el margen superior */
+    margin-top: 15%; /* Ajusta el margen superior */
 
     /* Efecto de máscara */
     -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 90%);
