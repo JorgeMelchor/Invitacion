@@ -1,3 +1,8 @@
+// Música de fondo global para poder controlarla desde fuera
+const bodySong = new Audio('assets/BodySong.m4a');
+bodySong.volume = 0.3;
+bodySong.loop = true;
+
 function openInvitation() {
     const welcomeScreen = document.querySelector('.welcome-screen');
     const mainContent = document.querySelector('.main-content');
@@ -5,11 +10,6 @@ function openInvitation() {
     // Sonido de papel
     const papelSound = new Audio('assets/papelSound.wav');
     papelSound.volume = 0.8;
-
-    // Música de fondo
-    const bodySong = new Audio('assets/BodySong.m4a');
-    bodySong.volume = 0.3;
-    bodySong.loop = true; // Hace que la música se repita
 
     // Reproducir el sonido de papel
     papelSound.play().catch(error => console.error('Error al reproducir papelSound:', error));
@@ -29,6 +29,20 @@ function openInvitation() {
         mainContent.classList.add('visible');
     }, 800);
 }
+
+// ⏸ Pausar y ▶️ reanudar música cuando cambie el estado de visibilidad de la página
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+        bodySong.pause();
+    } else {
+        bodySong.play().catch(e => console.error("Error al reanudar BodySong:", e));
+    }
+});
+
+
+//-------------------EL PEDO DE LA MUSICA  ES L ODE ARRIBA  ------
+
+
 
 document.getElementById("rsvpForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Evita el envío normal del formulario
@@ -109,31 +123,6 @@ function startCountdown() {
 
 
 
-//-----------Templo Ubicacion boton---
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".submit-btn").addEventListener("click", function () {
-        // URL de Google Maps con la ubicación del Templo del Señor de la Misericordia en Jalpa de Cánovas
-        const googleMapsUrl = "https://g.co/kgs/NnzTBR9";
-
-        // Redireccionar al usuario
-        window.open(googleMapsUrl, "_blank"); // Abre en una nueva pestaña
-    });
-});
-
-//-----------Templo Ubicacion boton---
-
-//----------------SALON DE FIESTA UBICACION BOTON----------------------
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".submit-btn2").addEventListener("click", function () {
-        // URL de Google Maps con la ubicación del Templo del Señor de la Misericordia en Jalpa de Cánovas
-        const googleMapsUrl = "https://maps.app.goo.gl/vC7tWgm8cwHsJP6VA";
-
-        // Redireccionar al usuario
-        window.open(googleMapsUrl, "_blank"); // Abre en una nueva pestaña
-    });
-});
-//----------------SALON UBICACION BOTON----------------------
-
 //-------------ubicacion misa y salon ------------------------
 document.addEventListener("DOMContentLoaded", function () {
     const locations = {
@@ -153,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //-------------ubicacion misa y salon ------------------------
 
 
-//----------------HOTEL 1 UBICACION----------------------
+//----------------LINK PARA MESA DE REGALOS ----------------------
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("mesaregalo").addEventListener("click", function () {
         // Cambia la URL al enlace de la mesa de regalos
@@ -161,3 +150,30 @@ document.addEventListener("DOMContentLoaded", function () {
         window.open(mesaDeRegalosUrl, "_blank"); // Abre en una nueva pestaña
     });
 });
+
+//----------------LINK PARA MESA DE REGALOS ----------------------
+
+
+//ESTE PEDO DE AQUI ES PARA LOS LINKS DE LOS HOTELES. 
+// Mapeo de botones con sus URLs de ubicación
+const hotelLinks = {
+    hotel1: "https://maps.app.goo.gl/Wkexivg5vQH7wZpSA", // Casa Luis Long
+    hotel2: "https://maps.app.goo.gl/AxVQYjf3QbYR5mEK6", // Puerta del Jardín
+    hotel3: "https://maps.app.goo.gl/FmmE351jsipWhukHA", // Villa del Carmen
+    hotel4: "https://maps.app.goo.gl/4Yc18iPA1H4pjLPe7"  // Quinta Jalpa
+};
+
+// Asigna un event listener a cada botón de hotel
+Object.keys(hotelLinks).forEach(hotelId => {
+    const button = document.getElementById(hotelId);
+    if (button) {
+        button.addEventListener("click", () => {
+            window.open(hotelLinks[hotelId], "_blank");
+        });
+    }
+});
+
+//ESTE PEDO DE AQUI ES PARA LOS LINKS DE LOS HOTELES.  
+
+
+//SE VIENE LO PERROTE LAS ANIMACIONES DE QUE TODO VAYA APARECIENDO CON FORME VAS SCROLLEANDO. 

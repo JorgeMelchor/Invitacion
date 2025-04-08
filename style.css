@@ -87,8 +87,8 @@
     text-align: top;
     color: #af9c50;
     font-weight: bold;
-    letter-spacing: 4px; /* Da un toque más refinado */
-    margin-top: 30%;
+    
+    margin-top: 10%;
 }
 .p2css{
     font-size: 100%;
@@ -184,26 +184,17 @@
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.301); /* Agrega sombra para resaltar */
 }
 
+
+/*ESte pedo es para que el fondo del cuerpo no se ande reescalando */
 .fondocuerpo {
-    position: relative; /* Asegura que el pseudo-elemento se posicione correctamente */
-    background-image: url("images/FondoIce.jpg"); 
+    background-image: url("images/FondoIce.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
-    background-attachment: fixed; 
+    background-attachment: fixed;
 }
 
-.fondocuerpo::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.212); /* Ajusta el color y la opacidad */
-    z-index: -2; /* Coloca la capa detrás del contenido */
-}
-
+/*ESte pedo es para que el fondo del cuerpo no se ande reescalando */
 
 
 .welcome-container {
