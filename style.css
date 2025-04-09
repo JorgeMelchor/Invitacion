@@ -521,15 +521,16 @@ label {
 
 /* SE VIENE EL PEDO DE LAS ANIMACIONES CON INFORMACION QUE APARECE DESVANECIDAMENTE */
 .fade-in {
-    opacity: 5;
-    transform: translateY(30px);
-    transition: opacity 3s ease-out, transform 3s ease-out;
-  }
-  
-  .fade-in.appear {
-    opacity: 3;
-    transform: translateY(0);
-  }
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 3s ease-out, transform 2s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 2;
+  transform: translateY(0);
+}
+
   
 
 /* SE VIENE EL PEDO DE LAS ANIMACIONES CON INFORMACION QUE APARECE DESVANECIDAMENTE */
