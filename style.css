@@ -516,3 +516,19 @@ label {
 
 
 /* -----------ESTE PEDO ES PARA EL CRONOMETRO------------*/
+
+
+/* SE VIENE EL PEDO DE LAS ANIMACIONES CON INFORMACION QUE APARECE DESVANECIDAMENTE */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+/* SE VIENE EL PEDO DE LAS ANIMACIONES CON INFORMACION QUE APARECE DESVANECIDAMENTE */

@@ -126,7 +126,7 @@ function startCountdown() {
 //-------------ubicacion misa y salon ------------------------
 document.addEventListener("DOMContentLoaded", function () {
     const locations = {
-        templo: "https://g.co/kgs/NnzTBR9", // Templo del Señor de la Misericordia
+        templo: "https://maps.app.goo.gl/yriBZHgLtA1i7wB86", // Templo de la Virgen de los Dolores
         fiesta: "https://maps.app.goo.gl/vC7tWgm8cwHsJP6VA" // Hacienda privada
     };
 
@@ -177,3 +177,24 @@ Object.keys(hotelLinks).forEach(hotelId => {
 
 
 //SE VIENE LO PERROTE LAS ANIMACIONES DE QUE TODO VAYA APARECIENDO CON FORME VAS SCROLLEANDO. 
+document.addEventListener("DOMContentLoaded", () => {
+    const faders = document.querySelectorAll('.fade-in');
+  
+    const options = {
+      threshold: 0.1
+    };
+  
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+  
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target); // Solo se anima una vez
+      });
+    }, options);
+  
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  });
+  
