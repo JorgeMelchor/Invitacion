@@ -109,7 +109,6 @@
     word-spacing: 0%; /* Ajusta el espacio entre palabras */
     text-align: center;
 
-
 }
 .p3css{
     font-size: 100%;
@@ -124,6 +123,20 @@
     word-spacing: .5px; /* Ajusta el espacio entre palabras */
     text-align: center;
     margin-top: auto;
+}
+.p6css{
+        font-size: 1.3rem;
+        font-family: 'Cinzel Decorative', serif;
+        color: #af9c50;
+        font-weight:900;
+        letter-spacing: 26%; /* Da un toque más refinado */
+        margin-top: 2%;
+        margin-bottom: 2%;
+        
+        hyphens: 1px; /* Permite separación silábica */
+        word-spacing: 0%; /* Ajusta el espacio entre palabras */
+        text-align: center;
+    
 }
 
 .AnillosIma {
@@ -288,6 +301,18 @@ body {
     margin-top: -4px;
 }
 
+.NoviosIco {
+    width: 80px; /* tamaño más controlado */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto; /* centrado y separación con texto */
+}
+.NoviosIco2 {
+    width: 65px; /* tamaño más controlado */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto; /* centrado y separación con texto */
+}
 
 
 
